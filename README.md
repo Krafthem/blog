@@ -1,0 +1,3 @@
+# Blog
+
+A tech blog!
