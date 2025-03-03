@@ -1,0 +1,42 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Tech Blog'
+theme="not-much"
+
+
+# [module]
+#   [[module.imports]]
+#     path = "github.com/hugo-sid/hugo-blog-awesome"
+
+# [[params.socialIcons]]
+# name = "github"
+# url = "https://github.com/krafthem/blog"
+
+[params]
+  # goToTop = true
+  theme = "dark"
+  palette = "Catpuccin"
+  description = "A blog about technology, travel, and more."
+
+# Controls the navigation
+[[menu.main]]
+  identifier = "about"
+  name = "about"
+  title = "About"
+  url = "/"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "posts"
+  title = "Posts"
+  url = "/posts"
+
+[[menu.main]]
+  identifier = "github"
+  name = "github"
+  title = "GitHub"
+  url = "https://github.com/krafthem/blog"
+
+# [params]
+# theme = "dark"
+# palette = "Dracula"
