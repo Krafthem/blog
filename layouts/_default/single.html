@@ -12,7 +12,7 @@
             {{ . | time.Format $configDateFormat }}
           </time>
           {{ with $.Params.author }}
-          <span class="post-author">· By {{ . }}</span>
+          <span class="post-author">{{ . }}</span>
           {{ end }}
         </div>
         {{ end }}
