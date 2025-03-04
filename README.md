@@ -16,9 +16,9 @@ Github actions is used to deploy the blog. We use whats written in this [guide](
 
 #### theme
 
-For theme we are using [Hugo blog awesome](https://themes.gohugo.io/themes/hugo-blog-awesome/).
+For theme we are using [Hugo blog awesome](https://themes.gohugo.io/themes/hugo-blog-awesome/). The theme is install as a git submodule
 
-To be able to allow setting author on posts I have overwritten the post theme post [layout](themes/hugo-blog-awesome/layouts/_default/single.html) with a [copy](layouts/_default/single.html) that allows setting author.
+To be able to allow setting author on posts I have overwritten the post theme post [layout](https://github.com/hugo-sid/hugo-blog-awesome/blob/c4a6784e1784c160355cafbde149e41ab14f6b0b/layouts/_default/single.html) with a [copy](https://github.com/Krafthem/blog/blob/main/layouts/_default/single.html) that allows setting author.
 
 ## how to blog
 
@@ -26,7 +26,7 @@ First install hugo ([install guides](https://gohugo.io/installation/))
 
 Then make a new post by running:
 
-    `hugo new posts/my-new-post.md`
+    hugo new posts/my-new-post.md
 
 Voila! blog away!
 
