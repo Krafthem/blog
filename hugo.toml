@@ -1,12 +1,12 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Tech Blog'
-theme = "hugo-blog-awesome"
+# theme = "hugo-blog-awesome"
 
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/krafthem/blog"
+# [[params.socialIcons]]
+# name = "github"
+# url = "https://github.com/krafthem/blog"
 
-[params]
-  goToTop = true
+# [params]
+#   goToTop = true
 
