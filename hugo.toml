@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Tech Blog'
 theme = "hugo-blog-awesome"
+cleanDestinationDir = true
 
 [[params.socialIcons]]
 name = "github"

@@ -14,7 +14,9 @@
       
       <guid>https://example.org/posts/test/</guid>
       
-      <description>&lt;h1 id=&#34;this-is-a-test-blog&#34;&gt;this is a test blog&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;this-is-a-test-blog&#34;&gt;this is a test blog&lt;/h1&gt;
+&lt;p&gt;eokfaeokfakefkaefoe&lt;/p&gt;
+&lt;p&gt;hello hello hello&lt;/p&gt;</description>
       
     </item>
     
