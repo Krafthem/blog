@@ -28,6 +28,16 @@ Then make a new post by running:
 
     hugo new posts/my-new-post.md
 
+To serve the blog run:
+
+    hugo server -D
+
+(the -D serves drafts, see the params in you blog post)
+
+To build you can run
+
+    hugo build
+
 Voila! blog away!
 
 To deploy blog, just merge to main!

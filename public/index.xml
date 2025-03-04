@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content on Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Mar 2025 13:35:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Mar 2025 13:35:44 +0100</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to setup a blog with hugo</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <title>Test blog</title>
+      <link>https://example.org/posts/test/</link>
       <pubDate>Mon, 03 Mar 2025 13:35:44 +0100</pubDate>
       
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://example.org/posts/test/</guid>
       
-      <description>&lt;h1 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; is a Open-Source framework for SSG written in golang. It provides a simple way to host a blog&lt;/p&gt;
-&lt;h2 id=&#34;steps&#34;&gt;steps&lt;/h2&gt;</description>
+      <description>&lt;h1 id=&#34;this-is-a-test-blog&#34;&gt;this is a test blog&lt;/h1&gt;</description>
       
     </item>
     
