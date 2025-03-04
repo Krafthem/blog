@@ -2,6 +2,8 @@
 
 A flower tech blog for sharing knowledge!
 
+**[Link to blog](https://krafthem.github.io/blog/)**
+
 ## stack
 
 This is a blog setup using [Hugo](https://gohugo.io/), which is a open source framework for SSG. The blog is hosted on [Github Pages](https://pages.github.com/).
