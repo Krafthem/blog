@@ -1,4 +1,19 @@
-(() => {
-  // <stdin>
-  console.log("\u{1F44B}\u{1F3FB} hello from Hugo and imgios!");
-})();
+'use strict';
+
+;
+window.addEventListener('load', () => {
+    const gttButton = document.getElementById("totop");
+    if (!gttButton) return;
+    window.onscroll = () => {
+        if (
+            document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 300
+        ) {
+            gttButton.style.visibility = "visible";
+            gttButton.style.opacity = "1";
+        } else {
+            gttButton.style.visibility = "hidden";
+            gttButton.style.opacity = "0";
+        }
+    };
+});

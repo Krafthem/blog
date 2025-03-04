@@ -1,7 +1,8 @@
 +++
+author = 'Axel Almquist'
 date = '2025-03-03T13:35:44+01:00'
 draft = false
-title = 'First Post - How to setup a blog with hugo'
+title = 'How to setup a blog with hugo'
 +++
 
 # What is Hugo?
