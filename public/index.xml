@@ -2,21 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech Blog</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Mar 2025 13:35:44 +0100</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Mar 2025 13:35:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test blog</title>
-      <link>https://example.org/posts/test/</link>
+      <title>Testing in Golang</title>
+      <link>http://localhost:1313/posts/testing-in-golang/</link>
       <pubDate>Mon, 03 Mar 2025 13:35:44 +0100</pubDate>
       
-      <guid>https://example.org/posts/test/</guid>
+      <guid>http://localhost:1313/posts/testing-in-golang/</guid>
       
-      <description>&lt;h1 id=&#34;this-is-a-test-blog&#34;&gt;this is a test blog&lt;/h1&gt;
-&lt;p&gt;eokfaeokfakefkaefoe&lt;/p&gt;
-&lt;p&gt;hello hello hello&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;testing-in-golang&#34;&gt;Testing in Golang&lt;/h1&gt;
+&lt;p&gt;During the last two year while moving to golang we gone threw a few interation of how to test things.&lt;/p&gt;
+&lt;p&gt;In this post ill go over our testing journey. In this post we will focus on unit testing.&lt;/p&gt;
+&lt;h2 id=&#34;prelude&#34;&gt;prelude&lt;/h2&gt;
+&lt;p&gt;Before we start I&amp;rsquo;d just like to cover some small concepts quick&lt;/p&gt;
+&lt;h3 id=&#34;na-that-is-not-a-unit-test&#34;&gt;Na, that is not a unit test?&lt;/h3&gt;
+&lt;p&gt;Before we dive in i&amp;rsquo;d also like to quickly mention what we refer to as a unit test. We define a unit rather lossely as &amp;lsquo;any unit of work that is indepenent of a external system
+during testing&amp;quot;. For example, this would not cover tests where we testing stuff that is hitting a running postgres db (setup in docker or whatever), but pretty much anything else;
+testing a small utility funciton or testing a larger unit of work involing many functions or/and structs.&lt;/p&gt;</description>
       
     </item>
     

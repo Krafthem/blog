@@ -13,13 +13,21 @@ In this post ill go over our testing journey. In this post we will focus on unit
 
 ## prelude
 
-Before we start I'd just like to cover some small concepts quick
+Before we dive in I'd like to cover some concepts quick
 
-### Na, that is not a unit test?
+### Na, that is not a unit test!
 
-Before we dive in i'd also like to quickly mention what we refer to as a unit test. We define a unit rather lossely as 'any unit of work that is indepenent of a external system
-during testing". For example, this would not cover tests where we testing stuff that is hitting a running postgres db (setup in docker or whatever), but pretty much anything else;
-testing a small utility funciton or testing a larger unit of work involing many functions or/and structs.
+What a unit and unittest is can vary. In our team, and in this blog, we do not see a unit as nessecarily corresponding 1:1 with a syntactic unit (class, function, stuct etc), but
+can e.g. encompass one or more functions. A unit for us is more about what is solved, it can be a complex business operation or a simpe data format parsing. What a unit is is also
+heavily dependent on the domain.
+
+However, we do have a rather firm definition of what a unit test is; _a test that is not dependent on a external service, such as a database_. This means that even if we are
+testing interaction with a database but mocking/stubbing that interaction out, it would count as a unittest.
+
+### testify is king
+
+Golang std lib for testing is somewhat lacking. The testify packages [assert](https://pkg.go.dev/github.com/stretchr/testify/assert) and
+[require](https://pkg.go.dev/github.com/stretchr/testify/require) are really good and making testing a lot nicer!
 
 ### table driven tests
 
@@ -35,6 +43,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func SomeFunc(input string) (string, error) {
@@ -69,18 +78,82 @@ func TestExample(t *testing.T) {
 			if tc.expectError {
 				assert.Error(t, err)
 			} else {
-				assert.NoError(t, err)
+				require.NoError(t, err)
 				assert.Equal(t, tc.want, got)
 			}
 
 		})
-
 	}
-
 }
 ```
 
-## MAIN
+## Part 1
+
+```go
+package main
+
+type User struct {
+	ID   string
+	Name string
+}
+
+
+func NewUser(name string) (User, error) {
+    if name == ""{
+        return fmt.Errorf("username cannot be empty")
+    }
+
+    return User{
+        ID: 123,
+        Name: name
+    }
+}
+
+type NewUserEvent struct {
+	ID     string
+	UserID string
+}
+
+type userRepo interface {
+	Get(id string) (User, error)
+	Insert(User) error
+}
+
+type eventQueue interface {
+	Send(NewUserEvent) error
+}
+
+type UserService struct {
+	repo userRepo
+    eventQueue eventQueue
+}
+
+func (u UserService) RegisterNewUser(name string) error {
+    user, err := NewUser(name)
+    if err != nil {
+        return err
+    }
+
+    err = repo.Insert(user)
+    if err != nil {
+        return err
+    }
+
+
+    err = repo.Insert(user)
+    if err != nil {
+        return err
+    }
+
+    err = eventQueue.Send()
+    if err != nil {
+        return err
+    }
+
+
+}
+
+```
 
 - Write story as going exploratory -> bad then -> improvements
 
